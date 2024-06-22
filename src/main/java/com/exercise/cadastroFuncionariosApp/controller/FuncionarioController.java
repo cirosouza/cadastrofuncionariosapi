@@ -34,7 +34,7 @@ public class FuncionarioController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteAluno(@PathVariable long id){
+    public ResponseEntity<?> deleteFuncionario(@PathVariable long id){
         Funcionario funcionario = funcionarioService.getFuncionarioById(id).orElseThrow(() -> new RuntimeException("Funcionario não encontrado " + id));
 
         funcionarioService.deleteFuncionario(funcionario);

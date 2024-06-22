@@ -20,7 +20,7 @@ public class DepartamentoController {
     }
 
     @GetMapping("/{id}")
-    public Departamento getAlunoById(@PathVariable long id){
+    public Departamento getDepartamentoById(@PathVariable long id){
         return departamentoService.getDepartamentoById(id).orElseThrow(() -> new RuntimeException("Departamento não encontrado " + id));
     }
 
